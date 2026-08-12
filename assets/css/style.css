@@ -5,3 +5,39 @@ body {
 label {
     color: red;
 }
+
+.sep {
+    height: 200vh;
+}
+
+.side-menu {
+    flex-direction: column;
+}
+
+.side-menu-header {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.side-menu .side-menu-header {
+    transform: translateX(-50px);
+    transition: transform, 0.6s;
+}
+.side-menu.is-active .side-menu-header {
+    transform: translateX(0px);
+}
+
+.side-menu-item {
+    font-size: 1rem;
+}
+
+.side-menu .side-menu-item {
+    transform: translateX(-50px);
+    
+    transition: transform, 0.6s;
+    transition-delay: 0.2s;
+}
+
+.side-menu.is-active .side-menu-item {
+    transform: translateX(0px);
+}
