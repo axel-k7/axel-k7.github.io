@@ -6,6 +6,42 @@ label {
     color: red;
 }
 
+.test-container {
+    justify-self: center;
+    width: fit-content;
+    overflow: hidden;
+    
+    mask-image: url('/assets/images/test-overlay.png');
+    mask-size: 75%;
+}
+
+.test-container.right{ margin-left: 20vw; }
+.test-container.right .test{ transform: translateX(-100%); }
+
+.test-container.left{ margin-right: 20vw;}
+.test-container.left .test{ transform: translateX(100%); }
+
+.test {
+    font-size: 80px;
+
+    text-shadow: 2px 2px #ff0000;
+
+    white-space: nowrap;
+    
+    width: 100%;
+    opacity: 0;
+    
+    transition: 
+        transform 1.4s ease-out,
+        opacity 0.6s linear;
+}
+
+.test.full {
+    transform: translateX(0%) !important;
+    opacity: 1;
+}
+
+
 .sep {
     height: 200vh;
 }

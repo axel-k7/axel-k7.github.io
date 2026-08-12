@@ -54,6 +54,11 @@ function observableChange(entries) {
 	});
 }
 
+Array.from(document.getElementsByClassName('test')).forEach(element => {
+	element.offsetWidth;
+	element.classList.add('full');
+});
+
 const ActivationPredicates = new Map();
 const DeactivationPredicates = new Map();
 
@@ -75,3 +80,5 @@ document.querySelectorAll('.observable').forEach(element => {
 		console.warn('tried to observe non-html element');
 	}
 });
+
+
