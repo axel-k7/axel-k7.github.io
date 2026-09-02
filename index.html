@@ -1,11 +1,69 @@
 <html>
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+    <!-- for code highlights! -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
     <link rel="stylesheet" href="assets/css/style.css"/>
     <script type="text/javascript" src="assets/js/function.js" defer></script>
 </head>
 
 <body>
+    <header class="hbox">
+        <a href="/">Pippi!</a>
+    </header>
+
+    <section class="intro">
+        <div class="hbox container">
+            <img 
+                class="intro-image"
+                src="assets\images\test-overlay.png"
+            >
+            
+            <div class="vbox">
+                <h2>da programmah</h2>
+                <h>Pippi</h>
+                <p>lots and lots of subtext!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="codeblock-test">
+        <pre>
+            <code class="hljs cpp">
+#pragma once
+
+#include "flowfield.h"
+
+class NavigationEntity;
+
+class AvoidanceField : public FlowField {
+    public:
+        const float AVOIDANCE_RADIUS = 2.0f;
+
+        auto RegisterEntity(NavigationEntity* _entity) -> int32_t;
+        void UnregisterEntity(int32_t _id);
+        auto QueryIdealDirection(const int32_t _id) -> Vector3;
+
+
+        int32_t entity_id = 0;
+        std::vector<int32_t> free_ids;
+
+        std::vector<NavigationEntity*> entities;
+        std::vector<int32_t> regions;
+
+        auto Avoidance(const int32_t _entity_id, const int32_t _region_id) -> Vector3;
+};
+            </code>
+        </pre>       
+    </section>
+
     <div class="test-container left">
         <div class="test">
             test!
@@ -18,12 +76,11 @@
         </div>
     </div>
 
-    <button onclick="boom()">do not click!!!</button>
-
-    <div class="sep"></div>
 
     <section class="side-menu observable">
-        <div class="side-menu-header">Navigation</div>
+        <div class="side-menu-header">
+            <h>Navigation</h>
+        </div>
         <div class="side-menu-item">
             <a href="/subpage-template/">subpage</a>
         </div>
@@ -32,9 +89,6 @@
 
 
     <div class="sep"></div>
-
-
-
 </body>
 
 </html>

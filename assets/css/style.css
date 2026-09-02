@@ -1,10 +1,111 @@
 body { 
-    background-color: aqua;
+    background-color: beige;
 }
 
 label {
     color: red;
 }
+
+/*section placeholder(?)*/
+section {
+    padding: 4rem 2rem;
+    border: 2px solid #e6dfd3;
+}
+
+a{
+    text-decoration: none;
+    color: #605f5b;
+    font-size: 2rem;
+
+    transition: color 0.3s, scale 0.3s;
+}
+
+a:hover {
+    scale: 1.2;
+    color: #c86b4b;
+}
+
+/*
+    headers, titles and such :) 
+*/
+h {
+    font-family: "Merriweather", serif;
+    font-size: 4rem;
+    color: #1a1a1a;
+
+    padding: 0;
+
+    transition: color 0.3s;
+}
+
+h:hover {
+    color: #c86b4b;
+    cursor: default;
+}
+
+
+/* 
+    teeny tiny sub-headers!
+*/
+h2 {
+    font-family: "Merriweather", serif;
+    font-size: 1.6rem;
+    color: #4b4a47;
+
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+
+    transition: color 0.3s;
+}
+
+h2:hover {
+    color: #c86b4b;
+    cursor: default;
+}
+
+
+/*
+    subtext, descriptors, paragraphs
+*/
+p {
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+    color: #605f5b;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.vbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.hbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.intro-image {
+    border-radius: 50%;
+    margin-right: 2vw;
+}
+
+
+.intro {background-color: #f4efe6;}
+
+
+
+
 
 .test-container {
     justify-self: center;
@@ -43,16 +144,11 @@ label {
 
 
 .sep {
-    height: 200vh;
+    height: 150vh;
 }
 
 .side-menu {
     flex-direction: column;
-}
-
-.side-menu-header {
-    font-size: 2rem;
-    font-weight: 900;
 }
 
 .side-menu .side-menu-header {
@@ -63,9 +159,6 @@ label {
     transform: translateX(0px);
 }
 
-.side-menu-item {
-    font-size: 1rem;
-}
 
 .side-menu .side-menu-item {
     transform: translateX(-50px);
