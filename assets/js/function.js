@@ -16,6 +16,14 @@ function elementBelow(entry) {
 
 /**
  * @param {IntersectionObserverEntry} entry 
+ */
+function hasScrolled(entry) {
+	return window.scrollY != 0;
+}
+
+
+/**
+ * @param {IntersectionObserverEntry} entry 
  * @param {Map} predicateMap
  */ 
 // Searches the predicate map with the intersection entries target classes
@@ -42,22 +50,21 @@ function observableChange(entries) {
 		
 		const element = entry.target;
 		const hasTag = element.classList.contains('is-active');
+		const reverse = element.classList.contains('reverse');
 
-		if (entry.isIntersecting) {
-			if (!hasTag && classPredicatesMet(entry, ActivationPredicates)) 
-				element.classList.add('is-active');
-		} 
-		else {
-			if (hasTag && classPredicatesMet(entry, DeactivationPredicates))
+		if (entry.isIntersecting && !reverse || reverse && !entry.isIntersecting) {
+			console.log("activation check: ", element)
+			if (!hasTag && classPredicatesMet(entry, ActivationPredicates)) {
+				element.classList.add('is-active');	
+			}
+		} else {
+			console.log("deactivation check: ", element)
+			if (hasTag && classPredicatesMet(entry, DeactivationPredicates)) {
 				element.classList.remove('is-active');
-		}		
+			}
+		}
 	});
 }
-
-Array.from(document.getElementsByClassName('test')).forEach(element => {
-	element.offsetWidth;
-	element.classList.add('full');
-});
 
 const ActivationPredicates = new Map();
 const DeactivationPredicates = new Map();
@@ -65,6 +72,12 @@ const DeactivationPredicates = new Map();
 // any class with 'side-menu' should only be deactivated
 // if the element is currently below the users view
 DeactivationPredicates.set('side-menu', elementBelow)
+
+ActivationPredicates.set('header', hasScrolled);
+
+//always stay active after initial trigger
+DeactivationPredicates.set('slider-container', () => false);
+
 
 const options = {
 	root: null,
@@ -82,3 +95,13 @@ document.querySelectorAll('.observable').forEach(element => {
 });
 
 
+document.querySelectorAll('a[href*="#"]').forEach(element => {
+	var target_class = element.getAttribute('href');
+	var target_element = document.getElementsByClassName(target_class)[0];
+
+	if (target_element instanceof HTMLElement) {
+		element.addEventListener('click', () => {
+			target_element.scrollIntoView({behavior: 'smooth'});
+		});
+	}
+});

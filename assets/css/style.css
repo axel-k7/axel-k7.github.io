@@ -1,28 +1,42 @@
+:root {
+    --main-bgc: beige;
+    --secondary-bgc: #f4efe6;
+    --dividing-color: #e6dfd3;
+
+    --title-color: #1a1a1a;
+    --secondary-title-color: #4b4a47;
+    --main-text: #605f5b;
+
+    --accent: #c86b4b;
+}
+
 body { 
-    background-color: beige;
+    background-color: var(--main-bgc);
+    margin: 0;
 }
 
 label {
     color: red;
 }
 
-/*section placeholder(?)*/
 section {
-    padding: 4rem 2rem;
-    border: 2px solid #e6dfd3;
+    padding: 0 4rem 0 4rem;
 }
 
-a{
+
+a {
     text-decoration: none;
-    color: #605f5b;
     font-size: 2rem;
+    
+    color: var(--main-text);
+    text-shadow: var(--dividing-color) 2px 2px;
 
     transition: color 0.3s, scale 0.3s;
 }
 
 a:hover {
     scale: 1.2;
-    color: #c86b4b;
+    color: var(--accent);
 }
 
 /*
@@ -31,15 +45,17 @@ a:hover {
 h {
     font-family: "Merriweather", serif;
     font-size: 4rem;
-    color: #1a1a1a;
 
+    color: var(--title-color);
+    text-shadow: var(--dividing-color) 2px 2px;
+    
     padding: 0;
 
     transition: color 0.3s;
 }
 
 h:hover {
-    color: #c86b4b;
+    color: var(--accent);
     cursor: default;
 }
 
@@ -50,7 +66,9 @@ h:hover {
 h2 {
     font-family: "Merriweather", serif;
     font-size: 1.6rem;
-    color: #4b4a47;
+    
+    color: var(--secondary-title-color);
+    text-shadow: var(--dividing-color) 2px 2px;
 
     font-weight: 200;
     padding: 0;
@@ -60,7 +78,7 @@ h2 {
 }
 
 h2:hover {
-    color: #c86b4b;
+    color: var(--accent);
     cursor: default;
 }
 
@@ -71,7 +89,7 @@ h2:hover {
 p {
     font-family: "Merriweather", serif;
     font-size: 2rem;
-    color: #605f5b;
+    color: var(--main-text);
 
     margin: 0;
     padding: 0;
@@ -89,58 +107,132 @@ p {
 }
 
 .container {
+    display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
 
 .intro-image {
     border-radius: 50%;
     margin-right: 2vw;
 }
 
+.intro {
+    min-height: 80vh;
 
-.intro {background-color: #f4efe6;}
-
-
-
-
-
-.test-container {
-    justify-self: center;
-    width: fit-content;
-    overflow: hidden;
-    
-    mask-image: url('/assets/images/test-overlay.png');
-    mask-size: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.test-container.right{ margin-left: 20vw; }
-.test-container.right .test{ transform: translateX(-100%); }
+.intro .container {
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+}
 
-.test-container.left{ margin-right: 20vw;}
-.test-container.left .test{ transform: translateX(100%); }
-
-.test {
-    font-size: 80px;
-
-    text-shadow: 2px 2px #ff0000;
-
-    white-space: nowrap;
+header {
+    position: fixed;
+    width: 97.5vw;
+    padding-left: 1vw;
+    padding-right: 1.5vw; /*accounting for scrollbar*/
     
-    width: 100%;
+    background-color: #f5f5dcbe;
+    z-index: 1;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 0px solid #e6dfd300;
+    transition: border-bottom 0.4s;
+
+    backdrop-filter: blur(7px);
+}
+
+.is-active header{
+    border-bottom: 3px solid var(--dividing-color);
+}
+
+.divider { flex-grow: 1; }
+
+.header-item { margin: 1rem 2rem; }
+
+.header-divider { user-select: none; }
+
+
+
+.timeline { scroll-margin-top: 40vh; }
+
+.timeline-header {
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-header h{
+    text-align: center;
+    border-bottom: var(--accent) 2px solid;
+}
+
+.slider-container {
+    margin-top: 4rem;
+}
+
+.slider {
+    overflow: hidden;
+    height: fit-content;
+    width: 45%;
+}
+
+.appear-left { 
+    transform: translateX(150%); 
+    border-right: var(--accent) 2px solid;
+}
+
+.appear-right { 
+    transform: translateX(-150%); 
+    border-left: var(--accent) 2px solid;
+}
+
+.slider-item {
+    background-color: var(--secondary-bgc);
+    border-bottom: var(--dividing-color) 3px solid;
+    padding: 1rem 3rem;
+    width: fit-content;
     opacity: 0;
-    
     transition: 
         transform 1.4s ease-out,
-        opacity 0.6s linear;
+        opacity 1.4s linear;
 }
 
-.test.full {
-    transform: translateX(0%) !important;
+.slider-container.is-active .slider .slider-item {
+    transform: translateX(0) !important;
     opacity: 1;
 }
+
+.slider-item h{
+    border-bottom: var(--dividing-color) 4px solid;
+    padding-bottom: 1rem;
+}
+
+.slider-item p{
+    margin-top: 2rem;
+}
+
+.opposite-item {
+    flex-grow: 1;
+    
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.slider-container.is-active .opposite-item {
+    opacity: 1;
+}
+
+
+
+
+
+
 
 
 .sep {

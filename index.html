@@ -15,15 +15,28 @@
 </head>
 
 <body>
-    <header class="hbox">
-        <a href="/">Pippi!</a>
-    </header>
+    <div class="reverse observable header">
+        <header class="header hbox">
+            <a class="header-item starter" href="/">Pippi!</a>
+            
+            <div class="divider"></div>
+            
+            <a class="header-item" href="#timeline">Projects</a>
+            <div class="header-divider">|</div>
+            <a class="header-item" href="">CV</a>
+            <div class="header-divider">|</div>
+            <a class="header-item" href="">Contact</a>
+            <div class="header-divider">|</div>
+            <a class="header-item" href="https://github.com/axel-k7">GitHub</a>
+        </header>
+    </div>
 
     <section class="intro">
+        
         <div class="hbox container">
             <img 
-                class="intro-image"
-                src="assets\images\test-overlay.png"
+            class="intro-image"
+            src="assets\images\test-overlay.png"
             >
             
             <div class="vbox">
@@ -33,6 +46,43 @@
             </div>
         </div>
     </section>
+
+    <div class="sep"></div>
+
+    <section class="timeline vbox" id="timeline">
+        <div class="timeline-header">
+            <h>hii haii this is a timeline</h>
+        </div>
+
+        <div class="observable slider-container hbox">
+            <div class="vbox slider">
+                <div class="slider-item appear-left">
+                    <h>project title :)</h>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
+                </div>
+            </div>
+
+            <div class="opposite-item container">
+                <img src="assets/images/test-overlay.png">
+            </div>
+        </div>
+
+        <div class="observable slider-container hbox">
+            <div class="opposite-item container"></div>
+
+            <div class="vbox slider">
+                <div class="slider-item appear-right">
+                    <h>project title :)</h>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
+                </div>
+                
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+
 
     <section class="codeblock-test">
         <pre>
@@ -63,18 +113,6 @@ class AvoidanceField : public FlowField {
             </code>
         </pre>       
     </section>
-
-    <div class="test-container left">
-        <div class="test">
-            test!
-        </div>
-    </div>
-
-    <div class="test-container right">
-        <div class="test">
-            test!
-        </div>
-    </div>
 
 
     <section class="side-menu observable">
