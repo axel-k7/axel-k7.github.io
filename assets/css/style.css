@@ -29,7 +29,6 @@ a {
     font-size: 2rem;
     
     color: var(--main-text);
-    text-shadow: var(--dividing-color) 2px 2px;
 
     transition: color 0.3s, scale 0.3s;
 }
@@ -59,18 +58,16 @@ h:hover {
     cursor: default;
 }
 
-
 /* 
-    teeny tiny sub-headers!
+    sub-headers
 */
 h2 {
     font-family: "Merriweather", serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
     
-    color: var(--secondary-title-color);
-    text-shadow: var(--dividing-color) 2px 2px;
+    color: var(--title-color);
 
-    font-weight: 200;
+    font-weight: 600;
     padding: 0;
     margin: 0;
 
@@ -83,13 +80,38 @@ h2:hover {
 }
 
 
+/* 
+    teeny tiny sub-headers!
+*/
+h3 {
+    font-family: "Merriweather", serif;
+    font-size: 1.6rem;
+    
+    color: var(--secondary-title-color);
+
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+
+    transition: color 0.3s;
+}
+
+h3:hover {
+    color: var(--accent);
+    cursor: default;
+}
+
+
 /*
     subtext, descriptors, paragraphs
 */
 p {
     font-family: "Merriweather", serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--main-text);
+
+    letter-spacing: 1px;
+    word-spacing: 2px;
 
     margin: 0;
     padding: 0;
@@ -130,6 +152,30 @@ p {
     border-radius: 2rem;
 }
 
+.title-container:hover *{
+    color: var(--accent);
+}
+
+
+.title-label {
+    margin-right: 2px;
+    padding-right: 2px;
+    border-right: 5px solid var(--accent);
+    animation: blinking 1000ms infinite;
+}
+
+@keyframes blinking {
+    0% {
+        border-color: var(--accent);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
 header {
     position: fixed;
     width: 97.5vw;
@@ -157,8 +203,6 @@ header {
 .header-item { margin: 1rem 2rem; }
 
 .header-divider { user-select: none; }
-
-
 
 .timeline { scroll-margin-top: 40vh; }
 
@@ -195,8 +239,8 @@ header {
 .slider-item {
     background-color: var(--secondary-bgc);
     border-bottom: var(--dividing-color) 3px solid;
-    padding: 1rem 3rem;
     width: fit-content;
+    padding: 2rem 2rem;
     opacity: 0;
     transition: 
         transform 1.4s ease-out,
@@ -208,16 +252,18 @@ header {
     opacity: 1;
 }
 
-.slider-item h{
+.slider-item h2{
     border-bottom: var(--dividing-color) 4px solid;
     padding-bottom: 1rem;
+    width: fit-content;
 }
 
-.slider-item p{
-    margin-top: 2rem;
+.slider-item p {
+    margin-top: 1.5rem;
 }
 
 .opposite-item {
+    margin-left: 10%;
     flex-grow: 1;
     
     opacity: 0;
