@@ -8,6 +8,8 @@
     --main-text: #605f5b;
 
     --accent: #c86b4b;
+
+    /*change font size with screen size*/
 }
 
 body { 
@@ -228,17 +230,21 @@ header {
 
 .appear-left { 
     transform: translateX(150%); 
-    border-right: var(--accent) 2px solid;
+    border-right: var(--accent) 4px solid;
+    border-left: var(--dividing-color) 2px solid;
 }
 
 .appear-right { 
     transform: translateX(-150%); 
-    border-left: var(--accent) 2px solid;
+    border-left: var(--accent) 4px solid;
+    border-right: var(--dividing-color) 2px solid;
 }
 
 .slider-item {
     background-color: var(--secondary-bgc);
+    border-top: var(--dividing-color) 2px solid;
     border-bottom: var(--dividing-color) 3px solid;
+
     width: fit-content;
     padding: 2rem 2rem;
     opacity: 0;
@@ -254,30 +260,60 @@ header {
 
 .slider-item h2{
     border-bottom: var(--dividing-color) 4px solid;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     width: fit-content;
 }
 
 .slider-item p {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
 }
 
+
 .opposite-item {
-    margin-left: 10%;
-    flex-grow: 1;
+    max-height: 100%;
+    min-width: 45%;
+    width: 45%;
     
     opacity: 0;
     transition: opacity 2s ease-in;
 }
 
+.opposite-item.left {
+    margin-left: 10%;
+}
+
+.opposite-item.right {
+    margin-right: 10%;
+}
+
+
 .slider-container.is-active .opposite-item {
     opacity: 1;
 }
 
+.project-poster {
+    width: 100%;
+    height: 24rem;
+    object-fit: contain;
+}
 
+.project-tag-container {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
 
-
-
+.project-tag-container span {
+    padding: 0.5rem 1rem;
+    
+    user-select: none;
+    
+    background-color: #f2ebe2;
+    border-top-right-radius: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    border-right: 2px solid var(--dividing-color);
+}
 
 
 
