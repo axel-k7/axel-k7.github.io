@@ -245,6 +245,7 @@ header {
     border-top: var(--dividing-color) 2px solid;
     border-bottom: var(--dividing-color) 3px solid;
 
+
     width: fit-content;
     padding: 2rem 2rem;
     opacity: 0;
@@ -298,6 +299,7 @@ header {
 }
 
 .project-tag-container {
+    flex-wrap: wrap;
     margin-top: 0.5rem;
     width: 100%;
     justify-content: flex-start;
@@ -315,6 +317,11 @@ header {
     border-right: 2px solid var(--dividing-color);
 }
 
+.project-title-image {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
 
 
 .sep {
