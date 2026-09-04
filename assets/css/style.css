@@ -10,6 +10,7 @@
     --accent: #c86b4b;
 
     /*change font size with screen size*/
+    font-family: "Merriweather", serif;
 }
 
 body { 
@@ -64,7 +65,6 @@ h:hover {
     sub-headers
 */
 h2 {
-    font-family: "Merriweather", serif;
     font-size: 2rem;
     
     color: var(--title-color);
@@ -86,7 +86,6 @@ h2:hover {
     teeny tiny sub-headers!
 */
 h3 {
-    font-family: "Merriweather", serif;
     font-size: 1.6rem;
     
     color: var(--secondary-title-color);
@@ -108,7 +107,6 @@ h3:hover {
     subtext, descriptors, paragraphs
 */
 p {
-    font-family: "Merriweather", serif;
     font-size: 1.5rem;
     color: var(--main-text);
 
@@ -226,7 +224,18 @@ header {
     overflow: hidden;
     height: fit-content;
     width: 45%;
+
+    transition: none !important;
 }
+
+.slider:hover {
+    cursor: pointer;
+}
+
+.slider:hover * {
+    cursor: inherit !important;
+}
+
 
 .appear-left { 
     transform: translateX(150%); 
@@ -272,11 +281,12 @@ header {
 
 .opposite-item {
     max-height: 100%;
+    min-height: 24rem;
     min-width: 45%;
     width: 45%;
     
     opacity: 0;
-    transition: opacity 2s ease-in;
+    transition: opacity 0.6s ease-in;
 }
 
 .opposite-item.left {
@@ -294,7 +304,8 @@ header {
 
 .project-poster {
     width: 100%;
-    height: 24rem;
+    min-height: 25rem;
+    max-height: 50rem;
     object-fit: contain;
 }
 
@@ -310,11 +321,19 @@ header {
     padding: 0.5rem 1rem;
     
     user-select: none;
+
+    font-weight: lighter;
     
     background-color: #f2ebe2;
     border-top-right-radius: 0.5rem;
     border-bottom: 2px solid var(--accent);
     border-right: 2px solid var(--dividing-color);
+
+    transition: color 0.3s;
+}
+
+.project-tag-container span:hover {
+    color: var(--accent);
 }
 
 .project-title-image {

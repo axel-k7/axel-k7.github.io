@@ -190,3 +190,14 @@ document.querySelectorAll('a[href*="#"]').forEach(element => {
 	}
 });
 
+document.getElementsByClassName('project').forEach(element => {
+	if (target_element instanceof HTMLElement) {
+		var target = element.getAttribute('data-project');
+		var link = 'pippi.page/';
+		link.concat(target);
+
+		element.addEventListener('click', () => {
+			window.location.replace(link);
+		});
+	}
+});
