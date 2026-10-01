@@ -17,239 +17,250 @@
 <body>
     <div class="reverse observable header">
         <header class="header hbox">
-            <a class="header-item starter" href="/">Pippi!</a>
+            <a class="header-item starter" href="/">Axel Kinnunen</a>
             
             <div class="divider"></div>
             
-            <a class="header-item" href="#timeline">Projects</a>
-            <div class="header-divider">|</div>
-            <a class="header-item" href="#contact">Contact</a>
-            <div class="header-divider">|</div>
-            <a class="header-item" href="">CV</a>
-            <div class="header-divider">|</div>
-            <a class="header-item" href="https://github.com/axel-k7">GitHub</a>
+            <a href="#overview">Overview</a>
+            <div class="">|</div>
+            <a href="#contact">Contact</a>
+            <div class="">|</div>
+            <a href="">CV</a>
+            <div class="">|</div>
+            <a href="https://github.com/axel-k7">GitHub</a>
         </header>
     </div>
 
-    <section class="intro">
-        
-        <div class="hbox container">
-            <img 
-            class="intro-image"
-            src="assets\images\test-overlay.png"
-            >
+    <div class="section-container">
+        <section id="intro">
+            <div class="hbox container">
+                <img 
+                    class="intro-image"
+                    src="assets\images\test-overlay.png"
+                >
+                
+                <div class="vbox">
+                    <div class="title-container hbox">
+                        <h3 class="observable title-label"></h3>
+                        <h3>Programmer</h3>
+                    </div>
+                    <h>Axel Kinnunen</h>
+                    <p>Descriptor goes here! :)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview">
+            <div class="container header"></div>
+        </section>
+
+        <section class="project-section vbox" id="projects">
+
+
+            <span class="project-showcase" data-project="gp3">
+                <div class="project-container">
+                    <div class="carousel">
+                        <button class="left"></button>
+                        <span class="content">
+                            <img src="assets/images/BODIE-SHOP_poster.png">
+                            <img src="assets/images/LevandriuSSC1.png">
+                            <h>hi</h>
+                        </span>
+                        <button class="right"></button>
+                        <div class="dot-container"></div>
+                    </div>
+
+                    <div class="project-info">                        
+                        <div class="observable slider">
+                            <h2 class="slider-item left">
+                                Game Project 3
+                            </h2>
+                        </div>
+
+                        <div class="project-tag-container hbox">
+                            <span>Game Project</span>
+                            <span>9 Weeks</span>
+                            <span>Unreal</span>
+                            <span>C++</span>
+                            <span>Blueprints</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
+                    </div>
+                </div>
+            </span>
+
+
+            <span class="project-showcase" data-project="horde-pathfinding">
+                <div class="project-container">
+                    <img src="assets/images/BODIE-SHOP_poster.png" class="project-poster">
+
+                    <div class="project-info">
+                        
+                        <div class="observable slider">
+                            <h2 class="slider-item left">
+                                Multi-Entity Pathfinding
+                            </h2>
+                        </div>
+
+                        <div class="project-tag-container hbox">
+                            <span>Personal Project</span>
+                            <span>2 Weeks</span>
+                            <span>Godot Implementation</span>
+                            <span>C++</span>
+                            <span>ECS</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
+                    </div>
+                </div>
+            </span>
+
+
+            <span class="project-showcase" data-project="frankie-stein">
+                <div class="project-container">
+                    <img src="assets/images/Frankie_collage.png" class="project-poster">
+
+                    <div class="project-info">
+                        
+                        <div class="observable slider">
+                            <h2 class="slider-item down">
+                                <img class="project-title-image" src="assets/images/Frankie-logo.png">
+                            </h2>
+                        </div>
+
+                        <div class="project-tag-container hbox">
+                            <span>Game Project</span>
+                            <span>9 Weeks</span>
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Tooling</span>
+                            <span>UI</span>
+                            <span>Systems</span>
+                        </div>
+                        <p>
+                            My second game project at PlaygroundSquad. <br>
+                            A Roguelike Strategy game developed for PC. 
+                        </p>
+                    </div>
+                </div>
+            </span>
+
+
+            <span class="project-showcase" data-project="godot-bt">
+                <div class="project-container">
+                    <img src="assets/images/BODIE-SHOP_poster.png" class="project-poster">
+
+                    <div class="project-info">
+                        <div class="observable slider">
+                            <h2 class="slider-item left">
+                                Godot Behaviour Tree
+                            </h2>
+                        </div>
+
+                        <div class="project-tag-container hbox">
+                            <span>Personal Project</span>
+                            <span>2 Weeks</span>
+                            <span>GDScript</span>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
+                    </div>
+                </div>
+            </span>
+
+
+            <span class="project-showcase" data-project="levandrius">
+                <div class="project-container">
+                    <img src="assets/images/LevandriuS_collage.png" class="project-poster">
+                    
+                    <div class="project-info">    
+                        <div class="observable slider">
+                            <h2 class="slider-item right">
+                                <img class="project-title-image" src="assets/images/LevandriuS_Logo_color1.png">
+                            </h2>
+                        </div>
+
+                        <div class="project-tag-container hbox">
+                            <span>Game Project</span>
+                            <span>PlayStation 5</span>
+                            <span>In-House Engine</span>
+                            <span>6 Weeks</span>
+                            <span>ECS</span>
+                            <span>Tooling</span>
+                            <span>Systems</span>
+                        </div>
+
+                        <p>
+                            My first game project at PlaygroundSquad. <br>
+                            A 2.5D Shoot 'Em Up game developed for the PS5.<br>
+                        </p>
+                    </div>
+                </div>
+            </span>
+
+
+            <span class="project-showcase" data-project="ecs">
+                <div class="project-container">
+                    <img src="assets/images/BODIE-SHOP_poster.png" class="project-poster">
+
+                    <div class="project-info">
+                        <div class="observable slider">
+                            <h2 class="slider-item left">
+                                ECS
+                            </h2>
+                        </div>
+
+                        <div class="project-tag-container hbox">
+                            <span>Personal Project</span>
+                            <span>3 Months</span>
+                            <span>C++</span>
+                            <span>Data Architecture</span>
+                            <span>Engine Independent</span>
+                        </div>
+
+                        <p>
+                            Long running project
+                        </p>
+                    </div>
+                </div>
+            </span>
             
-            <div class="vbox">
-                <div class="title-container hbox">
-                    <h3 class="observable title-label"></h3>
-                    <h3>Programmer</h3>
-                </div>
-                <h>Pippi</h>
-                <p>Descriptor goes here! :)</p>
-            </div>
-        </div>
-    </section>
 
-    <div class="sep"></div>
+            <span class="project-showcase" data-project="fracture">
+                <div class="project-container">
+                    <img src="assets/images/Fracture_collage.png" class="project-poster">
 
-    <section class="timeline-section vbox" id="timeline">
+                    <div class="project-info">
+                        <div class="observable slider">
+                            <h2 class="slider-item left">
+                                Fracture
+                            </h2>
+                        </div>
 
-        <div class="timeline-header">
-            <h>Project Showcase</h>
-        </div>
+                        <div class="project-tag-container hbox">
+                            <span>Game Project</span>
+                            <span>2 Weeks</span>
+                            <span>In-House Engine</span>
+                            <span>Physics</span>
+                            <span>Animations</span>
+                            <span>Systems</span>
+                        </div>
 
-        <div class="observable slider-container start hbox">
-            <div class="vbox slider project" data-project="gp3">
-                <div class="slider-item appear-left">
-                    <h2>Game Project 3</h2>
-                    <div class="project-tag-container hbox">
-                        <span>Game Project</span>
-                        <span>9 Weeks</span>
-                        <span>Unreal</span>
-                        <span>C++</span>
-                        <span>Blueprints</span>
+                        <p>
+                            My first group project at PlaygroundSquad. <br>
+                            This 3D Platformer was mostly meant to be preparation for the first 'real' game project, to familiarize us with the in-house engine. <br>
+                            Working with the barebones engine-framework we had access to, the challenge was real, but it also made the end-product that much more satisfying.
+                            Even though it may not hold up to modern game standards.
+                        </p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
                 </div>
-            </div>
+            </span>
+            
 
-            <div class="timeline start">
-                <div></div>
-            </div>
-
-            <div class="opposite-item left container">
-                <img src="assets/images/BODIE-SHOP_poster.png" class="project-poster">
-            </div>
-        </div>
+        </section>
 
 
-        <div class="observable slider-container hbox">
-            <div class="opposite-item right container">
-                <img src="assets/images/BODIE-SHOP_poster.png" class="project-poster">
-            </div>
-
-            <div class="timeline">
-                <div></div>
-            </div>
-
-            <div class="vbox slider project" data-project="horde-pathfinding">
-                <div class="slider-item appear-right">
-                    <h2>Multi-Entity Pathfinding</h2>
-                    <div class="project-tag-container hbox">
-                        <span>Personal Project</span>
-                        <span>2 Weeks</span>
-                        <span>Godot Implementation</span>
-                        <span>C++</span>
-                        <span>ECS</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="observable slider-container hbox">
-            <div class="vbox slider project" data-project="frankie-stein">
-                <div class="slider-item appear-left">
-                    <h2><img class="project-title-image" src="assets/images/Frankie-logo.png"></h2>
-                    <div class="project-tag-container hbox">
-                        <span>Game Project</span>
-                        <span>9 Weeks</span>
-                        <span>Unity</span>
-                        <span>C#</span>
-                        <span>Tooling</span>
-                        <span>UI</span>
-                        <span>Systems</span>
-                    </div>
-                    <p>
-                        My second game project at PlaygroundSquad. <br>
-                        A Roguelike Strategy game developed for PC. 
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline">
-                <div></div>
-            </div>
-
-            <div class="opposite-item left container">
-                <img src="assets/images/Frankie_collage.png" class="project-poster">
-            </div>
-        </div>
-
-
-        <div class="observable slider-container hbox">
-            <div class="opposite-item right container">
-                <img src="assets/images/BODIE-SHOP_poster.png" class="project-poster">
-            </div>
-
-            <div class="timeline">
-                <div></div>
-            </div>
-
-            <div class="vbox slider project" data-project="godot-bt">
-                <div class="slider-item appear-right">
-                    <h2>Godot Behaviour Tree</h2>
-                    <div class="project-tag-container hbox">
-                        <span>Personal Project</span>
-                        <span>2 Weeks</span>
-                        <span>GDScript</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis volutpat facilisis. Praesent enim nulla, blandit id varius ut, cursus quis odio. Aenean condimentum tristique erat, eu aliquam elit rhoncus a. Ut eget lectus sed tellus vehicula rhoncus tristique in diam. Etiam iaculis, lorem at ullamcorper auctor, ipsum felis ultricies massa, id cursus arcu sem in lectus. Etiam volutpat vitae nunc et vulputate. Duis non faucibus dolor. Vestibulum tincidunt semper lectus, sit amet cursus lorem interdum non. Vivamus auctor lectus massa, in eleifend sapien tempus et. Donec eros leo, vulputate sed bibendum ut, dapibus eget elit.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="observable slider-container hbox">
-            <div class="vbox slider project" data-project="levandrius">
-                <div class="slider-item appear-left">
-                    <h2><img class="project-title-image" src="assets/images/LevandriuS_Logo_color1.png"></h2>
-                    <div class="project-tag-container hbox">
-                        <span>Game Project</span>
-                        <span>PlayStation 5</span>
-                        <span>In-House Engine</span>
-                        <span>6 Weeks</span>
-                        <span>ECS</span>
-                        <span>Tooling</span>
-                        <span>Systems</span>
-                    </div>
-                    <p>
-                        My first game project at PlaygroundSquad. <br>
-                        A 2.5D Shoot 'Em Up game developed for the PS5.<br>
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline">
-                <div></div>
-            </div>
-
-            <div class="opposite-item left container vbox">
-                <img src="assets/images/LevandriuS_collage.png" class="project-poster">
-            </div>
-        </div>
-
-
-        <div class="observable slider-container hbox">
-            <div class="opposite-item right container">
-                <img src="assets/images/BODIE-SHOP_poster.png" class="project-poster">
-            </div>
-
-            <div class="timeline">
-                <div></div>
-            </div>
-
-            <div class="vbox slider project" data-project="ecs">
-                <div class="slider-item appear-right">
-                    <h2>ECS</h2>
-                    <div class="project-tag-container hbox">
-                        <span>Personal Project</span>
-                        <span>3 Months</span>
-                        <span>C++</span>
-                        <span>Data Architecture</span>
-                        <span>Engine Independent</span>
-                    </div>
-                    <p>Long running project</p>
-                </div>  
-            </div>
-        </div>
-
-        <div class="observable slider-container end hbox">
-            <div class="vbox slider project" data-project="fracture">
-                <div class="slider-item appear-left">
-                    <h2>Fracture</h2>
-                     <div class="project-tag-container hbox">
-                        <span>Game Project</span>
-                        <span>2 Weeks</span>
-                        <span>In-House Engine</span>
-                        <span>Physics</span>
-                        <span>Animations</span>
-                        <span>Systems</span>
-                    </div>
-                    <p> 
-                        My first group project at PlaygroundSquad. <br>
-                        This 3D Platformer was mostly meant to be preparation for the first 'real' game project, to familiarize us with the in-house engine. <br>
-                        Working with the barebones engine-framework we had access to, the challenge was real, but it also made the end-product that much more satisfying.
-                        Even though it may not hold up to modern game standards.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline">
-                <div></div>
-            </div>
-
-            <div class="opposite-item left container">
-                <img src="assets/images/Fracture_collage.png" class="project-poster">
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="codeblock-test">
-<pre>
+        <section class="codeblock-test"> 
+            <pre>
 <code class="hljs cpp">
 #pragma once
 
@@ -275,19 +286,21 @@ class AvoidanceField : public FlowField {
         auto Avoidance(const int32_t _entity_id, const int32_t _region_id) -> Vector3;
 };
 </code>
-</pre>       
-    </section>
+            </pre>       
+        </section>
 
 
-    <section class="side-menu observable">
-        <div class="side-menu-header">
-            <h>Side menu</h>
-        </div>
-        <div class="side-menu-item">
-            <a href="/subpage-template/">subpage</a>
-        </div>
+        <section class="side-menu observable">
+            <div class="side-menu-header">
+                <h>Side menu</h>
+            </div>
+            <div class="side-menu-item">
+                <a href="/subpage-template/">subpage</a>
+            </div>
 
-    </section>
+        </section>
+    </div>
+
 
 
     <div class="sep"></div>

@@ -156,7 +156,7 @@ DeactivationPredicates.set('side-menu', elementBelow)
 ActivationPredicates.set('header', hasScrolled);
 
 //always stay active after initial trigger
-DeactivationPredicates.set('slider-container', () => false);
+DeactivationPredicates.set('slider', () => false);
 
 ActivationPredicates.set('title-label', startRotation);
 DeactivationPredicates.set('title-label', stopRotation);
@@ -181,7 +181,7 @@ document.querySelectorAll('.observable').forEach(element => {
 
 document.querySelectorAll('a[href*="#"]').forEach(element => {
 	var target_class = element.getAttribute('href');
-	var target_element = document.getElementsByClassName(target_class)[0];
+	var target_element = document.querySelectorAll(target_class)[0];
 
 	if (target_element instanceof HTMLElement) {
 		element.addEventListener('click', () => {
@@ -200,4 +200,8 @@ document.getElementsByClassName('project').forEach(element => {
 			window.location.replace(link);
 		});
 	}
+});
+
+document.querySelectorAll('.carousel').forEach(element => {
+	
 });
