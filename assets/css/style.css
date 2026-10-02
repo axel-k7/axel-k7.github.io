@@ -209,7 +209,7 @@ p {
 
     button {
         height: 100%;
-        width: 24rem;
+        width: 12rem;
 
         position: relative;
         
@@ -259,12 +259,31 @@ p {
     }
 
     .dot-container {
-        left: 0; right: 0; top: 0; bottom: 0;
-
         position: absolute;
-        background-color: white;
-        width: 32px;
-        height: 32px;
+        left: 0; right: 0; top: 0; bottom: 0;
+        justify-self: center;
+        align-self: end;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: fit-content;
+
+        gap: 4px;
+        margin-bottom: 1rem;
+        
+        .slide-dot {
+            border-radius: 14px;
+            height: 0.25rem;
+            width: 0.25rem;
+
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: background-color ease-out 0.5s;
+            
+            .is-active {
+                background-color: rgba(255, 255, 255);
+            }
+        }
     }
 }
 
@@ -283,7 +302,7 @@ header {
     padding-right: 1.5vw; /*accounting for scrollbar*/
     
     background-color: #f5f5dcbe;
-    z-index: 1;
+    z-index: 15;
 
     justify-content: space-between;
     align-items: center;
@@ -294,6 +313,7 @@ header {
     transition: border-bottom 0.4s;
 
     a { 
+        font-size: 1.5rem;
         margin: 1rem 2rem;
         text-wrap: nowrap;
     }
@@ -440,44 +460,10 @@ section#projects {
     }
 }
 
-
 /*---------------------------- PROJECTS END ----------------------------*/
 
 
 /*---------------------------- SECTIONS END ----------------------------*/
-
-
-
-
-
-
-.sep {
-    height: 150vh;
-}
-
-.side-menu {
-    flex-direction: column;
-}
-
-.side-menu .side-menu-header {
-    transform: translateX(-50px);
-    transition: transform, 0.6s;
-}
-.side-menu.is-active .side-menu-header {
-    transform: translateX(0px);
-}
-
-
-.side-menu .side-menu-item {
-    transform: translateX(-50px);
-    
-    transition: transform, 0.6s, ease-out;
-    transition-delay: 0.2s;
-}
-
-.side-menu.is-active .side-menu-item {
-    transform: translateX(0px);
-}
 
 
 /*---------------------------- FOOTER ----------------------------*/
@@ -609,3 +595,34 @@ footer {
 }
 
 /*---------------------------- FOOTER END ----------------------------*/
+
+
+/*---------------------------- TEMP / OLD ----------------------------*/
+
+.sep {
+    height: 150vh;
+}
+
+.side-menu {
+    flex-direction: column;
+}
+
+.side-menu .side-menu-header {
+    transform: translateX(-50px);
+    transition: transform, 0.6s;
+}
+.side-menu.is-active .side-menu-header {
+    transform: translateX(0px);
+}
+
+
+.side-menu .side-menu-item {
+    transform: translateX(-50px);
+    
+    transition: transform, 0.6s, ease-out;
+    transition-delay: 0.2s;
+}
+
+.side-menu.is-active .side-menu-item {
+    transform: translateX(0px);
+}

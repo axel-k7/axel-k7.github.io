@@ -190,8 +190,9 @@ document.querySelectorAll('a[href*="#"]').forEach(element => {
 	}
 });
 
-document.getElementsByClassName('project').forEach(element => {
-	if (target_element instanceof HTMLElement) {
+document.querySelectorAll('.project-showcase').forEach(element => {
+	return;
+	if (element instanceof HTMLElement) {
 		var target = element.getAttribute('data-project');
 		var link = 'pippi.page/';
 		link.concat(target);
@@ -202,6 +203,48 @@ document.getElementsByClassName('project').forEach(element => {
 	}
 });
 
-document.querySelectorAll('.carousel').forEach(element => {
-	
+
+
+
+
+
+
+
+
+
+
+
+
+var carousel_elements =  document.querySelectorAll('.carousel');
+var indexes = new Int16Array(carousel_elements.length);
+indexes.fill(0);
+var content_list = new Array(carousel_elements.length);
+var c_index = 0;
+
+
+function updateCarouselIndex(_carousel_index, _prev_index, _new_index) {
+	var content = content_list[_carousel_index];
+
+	content.children[_old_index].classList.remove('is_active');
+	content.children[_new_index].classList.add('is_active');
+}
+
+carousel_elements.forEach(element => {
+	element.children.every(child => {
+		if (child.classList.contains('content')) {
+			content_list[c_index] = child;
+		}
+		else if (child.classList.contains('left')) {
+			child.addEventListener('click', () => {
+				var prev_index = indexes[c_index];
+				var new_index = ++indexes[c_index];
+
+				updateCarouselIndex(c_index, prev_index, new_index);
+			});
+		}
+
+	});
+	var left_button = element.child
+
+	c_index++;
 });
