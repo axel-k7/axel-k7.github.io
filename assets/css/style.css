@@ -9,7 +9,7 @@
     --secondary-title-color: #4b4a47;
     --main-text: #605f5b;
 
-    --accent: #c86b4b;
+    --accent: rgb(200, 107, 75);
 
     /*change font size with screen size*/
     font-family: "Merriweather", serif;
@@ -61,7 +61,6 @@ h {
 
 h:hover {
     color: var(--accent);
-    cursor: default;
 }
 
 /* 
@@ -81,7 +80,6 @@ h2 {
 
 h2:hover {
     color: var(--accent);
-    cursor: default;
 }
 
 
@@ -102,7 +100,6 @@ h3 {
 
 h3:hover {
     color: var(--accent);
-    cursor: default;
 }
 
 
@@ -180,6 +177,7 @@ p {
     position: relative;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 
     .content {
         left: 0; right: 0; top: 0; bottom: 0;
@@ -187,11 +185,14 @@ p {
 
         display: grid;
         grid-auto-flow: column;
-        grid-template-columns: 100% 100%;
+        grid-auto-columns: 100%;
         overflow-x: auto;
 
         position: absolute;
-        overflow: hidden;
+        overflow: visible;
+        
+        transition: transform 0.4s ease-out;
+
 
         * {
             min-width: 0;
@@ -201,9 +202,10 @@ p {
 
             position: relative;
             justify-self: center;
+            align-self: center;
             object-fit: contain;
 
-            transition: transform 0.4s ease-out;
+            color: white;
         }
     }
 
@@ -221,7 +223,9 @@ p {
             left: 0; right: 0; top: 0; bottom: 0;
             z-index: 1;
             
-            transition: backdrop-filter 0.4s ease-out;
+            transition: 
+                backdrop-filter 0.4s ease-out,
+                background-color 0.25s ease-out;
         }
 
         &::after {
@@ -238,7 +242,10 @@ p {
             transition: opacity 0.4s ease-out;
         }
         
-        &:hover::before { backdrop-filter: blur(16px); }
+        &:hover::before { 
+            backdrop-filter: blur(16px); 
+            background-color: rgba(245, 245, 220, 0.5);
+        }
         &:hover::after { opacity: 1; }
 
         &.left {
@@ -280,7 +287,7 @@ p {
             background-color: rgba(255, 255, 255, 0.5);
             transition: background-color ease-out 0.5s;
             
-            .is-active {
+            &.is-active {
                 background-color: rgba(255, 255, 255);
             }
         }
@@ -345,10 +352,13 @@ header {
 
 section#intro {
     height: 100vh;
+    padding-bottom: 20vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: default;
 
     .intro-image {
         border-radius: 50%;
@@ -383,6 +393,8 @@ section#projects {
     gap: 5rem;
 
     .project-showcase {
+        cursor: pointer;
+
         .project-container {
             background-color: var(--secondary-bgc);
             border-top: var(--dividing-color) 2px solid;
@@ -409,12 +421,6 @@ section#projects {
                 min-height: 25rem;
                 max-height: 50rem;
                 object-fit: cover;
-            }
-
-            .project-title-image {
-                object-fit: cover;
-                max-width: 100%;
-                max-height: 100%;
             }
 
             .project-info {
