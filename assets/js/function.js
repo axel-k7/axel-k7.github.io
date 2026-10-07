@@ -184,27 +184,21 @@ document.querySelectorAll('a[href*="#"]').forEach(element => {
 	var target_element = document.querySelectorAll(target_class)[0];
 
 	if (target_element instanceof HTMLElement) {
-		element.addEventListener('click', () => {
+		element.addEventListener('click', (event) => {
+			event.preventDefault();
 			target_element.scrollIntoView({behavior: 'smooth'});
 		});
 	}
 });
 
+
 document.querySelectorAll('.project-showcase').forEach(element => {
-	return;
-	if (element instanceof HTMLElement) {
-		var target = element.getAttribute('data-project');
-		var link = 'pippi.page/';
-		link.concat(target);
+	var target = element.getAttribute('data-project');
 
-		element.addEventListener('click', () => {
-			window.location.replace(link);
-		});
-	}
+	element.querySelector('.project-info').addEventListener('click', () => {
+		window.location.href = '/' + target;
+	});
 });
-
-
-
 
 
 document.querySelectorAll('.carousel').forEach((carousel) => {

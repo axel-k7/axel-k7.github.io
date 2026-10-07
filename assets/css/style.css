@@ -393,75 +393,73 @@ section#projects {
     gap: 5rem;
 
     .project-showcase {
-        cursor: pointer;
-
-        .project-container {
-            background-color: var(--secondary-bgc);
-            border-top: var(--dividing-color) 2px solid;
-            border-bottom: var(--dividing-color) 3px solid;        
+        background-color: var(--secondary-bgc);
+        border-top: var(--dividing-color) 2px solid;
+        border-bottom: var(--dividing-color) 3px solid;        
             
-            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15),
-                        0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
-            transition: box-shadow 0.6s ease-out;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15),
+                    0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.6s ease-out;
 
-            &:hover {
-                box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.4),
-                            0 1rem 2rem 0 rgba(0, 0, 0, 0.4);
+        &:hover {
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.4),
+                        0 1rem 2rem 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .carousel {
+            height: 34rem;
+            width: 100%;
+            background-image: linear-gradient(135deg, var(--accent), black, var(--accent));
+        }
+
+        .project-poster {
+            top: 0;
+            width: 100%;
+            min-height: 25rem;
+            max-height: 50rem;
+            object-fit: cover;
+        }
+
+        .project-info {
+            border-top: 0.5rem solid var(--accent);
+            padding: 1rem 2rem;
+            cursor: pointer;
+
+            .slider {
+                border-bottom: var(--dividing-color) 4px solid;
+                padding-bottom: 0.5rem;
             }
 
-            .carousel {
-                height: 34rem;
+            .project-tag-container {
+                padding-top: 0.5rem;
+                flex-wrap: wrap;
                 width: 100%;
-                background-image: linear-gradient(135deg, var(--accent), black, var(--accent));
-            }
+                justify-content: flex-start;
+                gap: 0.5rem;
 
-            .project-poster {
-                top: 0;
-                width: 100%;
-                min-height: 25rem;
-                max-height: 50rem;
-                object-fit: cover;
-            }
-
-            .project-info {
-                border-top: 0.5rem solid var(--accent);
-                padding: 1rem 2rem;
-
-                .slider {
-                    border-bottom: var(--dividing-color) 4px solid;
-                    padding-bottom: 0.5rem;
-                }
-
-                .project-tag-container {
-                    padding-top: 0.5rem;
-                    flex-wrap: wrap;
-                    width: 100%;
-                    justify-content: flex-start;
-                    gap: 0.5rem;
-
-                    span {
-                        padding: 0.5rem 1rem;
+                 span {
+                    padding: 0.5rem 1rem;
                     
-                        user-select: none;
+                    user-select: none;
 
-                        font-weight: lighter;
-                        
-                        background-color: #f2ebe2;
-                        border-top-right-radius: 0.5rem;
-                        border-bottom: 2px solid var(--accent);
-                        border-right: 2px solid var(--dividing-color);
+                    font-weight: lighter;
+                    
+                    background-color: #f2ebe2;
+                    border-top-right-radius: 0.5rem;
+                    border-bottom: 2px solid var(--accent);
+                    border-right: 2px solid var(--dividing-color);
 
-                        transition: color 0.3s;
-                        &:hover {
-                            color: var(--accent);
-                        }
+                    transition: color 0.3s;
+                    &:hover {
+                        color: var(--accent);
                     }
                 }
-
-                p {
-                    padding-top: 0.5rem;
-                }
             }
+
+            p {
+                padding-top: 0.5rem;
+            }
+            
         }
     }
 }
